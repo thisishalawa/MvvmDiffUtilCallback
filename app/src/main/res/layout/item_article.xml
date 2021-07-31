@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        style="@style/matchWrap_"
+        android:layout_margin="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/mainText"
+            style="@style/mainText_"
+            android:text="@string/app_name"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/subText"
+            style="@style/subText_"
+            android:text="@string/app_name" />
+
+    </LinearLayout>
+</layout>
