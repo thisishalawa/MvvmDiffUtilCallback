@@ -6,7 +6,7 @@ import mvvm.articles.pagination.data.entity.Source
 class Converters {
 
     @TypeConverter
-    fun fromSource(source: Source): String {
+    fun fromSource(source: Source): String? {
         return source.name
     }
 

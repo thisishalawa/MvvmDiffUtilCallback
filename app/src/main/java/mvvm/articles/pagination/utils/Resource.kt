@@ -3,8 +3,10 @@ package mvvm.articles.pagination.utils
 
 /*
 * generic class <T> to handle loading state
+* generic type (Network response)
+*
 * */
-sealed class Resource<T>/*generic type*/(
+sealed class Resource<T>(
     /* sealed class just abstract but we can define which class allowed to
     *   inherit -
     * Success & Error & Loading

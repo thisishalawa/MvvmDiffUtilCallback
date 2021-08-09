@@ -1,4 +1,4 @@
-package mvvm.articles.pagination.adapter
+package mvvm.articles.pagination.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -52,11 +52,28 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
                 binding.mainText.text = this.title
                 binding.subText.text = this.content
             }
+
+            // onClick! itemView.view
+            itemView.setOnClickListener {
+                onItemClickListener?.let { it(article) }
+            }
         }
     }
 
     override fun getItemCount(): Int {
         return differ.currentList.size
     }
+
+    /* on clicked!
+    *  lamda fun takes article as a parameter
+    *  return noting null is def!
+    * */
+
+    private var onItemClickListener: ((Article) -> Unit)? = null
+
+    fun setOnItemClickListener(listener: (Article) -> Unit) {
+        onItemClickListener = listener
+    }
+
 
 }

@@ -10,8 +10,8 @@ data class Article(
     @PrimaryKey(autoGenerate = true)
     val id: Int? = null,
     /* stuff to display */
-    val title: String? = null,
-    val content: String? = null,
+    val title: String?,
+    val content: String?,
     val url: String?,
     val source: Source?,
 ) : Serializable

@@ -2,11 +2,17 @@ package mvvm.articles.pagination.data.entity
 
 
 data class ArticlesResponse(
-    val articles: List<Article>,
+    val articles: MutableList<Article>,
     val status: String,
     val totalResults: Int
+    /*
+    *
+    *     val articles: List<Article>, ->
+    *     val articles: MutableList<Article>,
+    *     to be able to add new articles to when pagination loaded
+    *
+    * */
 )
-
 
 
 /*

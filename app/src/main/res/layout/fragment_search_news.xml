@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        style="@style/matchMatch_"
+        tools:context=".ui.fragments.SearchNewsFragment">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/autoCompleteEditText"
+            style="@style/matchWrap_"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:background="@color/black"
+            android:gravity="start"
+            android:hint="Search something ..."
+            android:padding="@dimen/_30sdp"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/_13ssp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBreakingNews"
+            style="@style/matchMatch_"
+            android:layout_below="@id/autoCompleteEditText"
+            android:layout_centerInParent="true"
+            android:clipToPadding="false" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/progress_"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</layout>

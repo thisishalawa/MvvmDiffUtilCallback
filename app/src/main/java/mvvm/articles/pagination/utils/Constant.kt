@@ -6,9 +6,10 @@ class Constant {
 
         const val API_KEY = "api_key.txt"
         const val URL_BASE = "http://newsapi.org/"
-
         const val DEBUG_TAG = "DEBUG_TAG"
 
+        const val SEARCH_NEWS_TIME_DELAY = 1000L
+        const val QUERY_PAGE_SIZE = 20
     }
 }
 /*

@@ -6,8 +6,8 @@ import androidx.lifecycle.ViewModelProvider
 import mvvm.articles.pagination.data.db.ArticleDatabase
 import mvvm.articles.pagination.databinding.ActivityMainBinding
 import mvvm.articles.pagination.repository.NewsRepository
-import mvvm.articles.pagination.ui.fragments.viewmodel.NewsViewModel
-import mvvm.articles.pagination.ui.fragments.viewmodel.NewsViewModelProviderFactory
+import mvvm.articles.pagination.ui.viewmodel.NewsViewModel
+import mvvm.articles.pagination.ui.viewmodel.NewsViewModelProviderFactory
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         // viewModel
         val newsRepository = NewsRepository(ArticleDatabase(this))
         val viewModelProviderFactory =
-            NewsViewModelProviderFactory(newsRepository)
+            NewsViewModelProviderFactory(application, newsRepository)
 
         viewModel = ViewModelProvider(this, viewModelProviderFactory).get(
             NewsViewModel::class.java

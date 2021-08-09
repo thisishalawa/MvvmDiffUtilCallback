@@ -9,5 +9,16 @@
         android:id="@+id/firstFragment"
         android:name="mvvm.articles.pagination.ui.fragments.FirstFragment"
         android:label="fragment_first"
-        tools:layout="@layout/fragment_first" />
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_to_searchNewsFragment"
+            app:destination="@id/searchNewsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/searchNewsFragment"
+        android:name="mvvm.articles.pagination.ui.fragments.SearchNewsFragment"
+        android:label="SearchNewsFragment" />
+
 </navigation>
